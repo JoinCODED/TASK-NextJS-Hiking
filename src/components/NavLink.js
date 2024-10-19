@@ -8,10 +8,14 @@ const inactiveStyle = "text-white hover:text-primary py-3 px-3 rounded transitio
 
 function NavLink({ href, children }) {
   const pathname = usePathname();
+  const isActive = pathname === href;
 
   return (
-    // Complete this component so that it changes style when the link is "active"
-    <Link href={href} className={inactiveStyle}>{children}</Link>
+    <Link
+      href={href}
+      className={isActive ? activeStyle : inactiveStyle}>
+      {children}
+    </Link>
   )
 }
 
