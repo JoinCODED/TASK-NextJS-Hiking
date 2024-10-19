@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 
+import DifficultyButton from "./DifficultyButton";
 import SearchBar from "./SearchBar";
 import TripCard from "./TripCard";
 
@@ -28,21 +29,9 @@ function TripList() {
         <br />
         <SearchBar setQuery={setQuery} />
         <div className="text-center mt-4">
-          <Link href="/trips?difficulty=easy">
-            <button className="bg-primary hover:bg-primarydark text-white  py-5 px-6 rounded-lg text-lg mx-2 mb-2">
-              Easy
-            </button>
-          </Link>
-          <Link href="/trips?difficulty=moderate">
-            <button className="bg-primary hover:bg-primarydark text-white  py-5 px-6 rounded-lg text-lg mx-2 mb-2">
-              Moderate
-            </button>
-          </Link>
-          <Link href="/trips?difficulty=hard">
-            <button className="bg-primary hover:bg-primarydark text-white  py-5 px-6 rounded-lg text-lg mx-2 mb-2">
-              Hard
-            </button>
-          </Link>
+          <DifficultyButton difficulty="easy" isActive={difficulty === "easy"} />
+          <DifficultyButton difficulty="moderate" isActive={difficulty === "moderate"} />
+          <DifficultyButton difficulty="hard" isActive={difficulty === "hard"} />
         </div>
         <div className="flex justify-center items-center my-8">
           <div className="w-[10%] h-1 rounded bg-secondary"></div>
