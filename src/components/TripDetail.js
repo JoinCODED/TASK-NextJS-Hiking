@@ -1,8 +1,8 @@
 import trips from "@/data/trips";
 import Image from "next/image";
 
-function TripDetail() {
-  const trip = trips[0];
+function TripDetail({ slug }) {
+  const trip = trips.find(trip => trip.slug === slug)
 
   return (
     <div className="max-w-5xl mx-auto border-gray-300 border-2 rounded-md mb-4">
