@@ -8,8 +8,6 @@ export default function Home() {
     <div>
       <Navbar />
       <Welcome />
-      <TripList />
-      <TripDetail />
     </div>
   );
 }
