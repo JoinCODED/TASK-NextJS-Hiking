@@ -1,3 +1,5 @@
+import NavLink from "./NavLink";
+
 function Navbar() {
   return (
     <nav
@@ -13,20 +15,14 @@ function Navbar() {
           <div className="hidden md:block" id="navbarResponsive">
             <ul className="flex space-x-4">
               <li>
-                <a
-                  href="#"
-                  className="text-white hover:text-primary py-3 px-3 rounded transition duration-300"
-                >
+                <NavLink href="/">
                   Home
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-white hover:text-primary py-3 px-3 rounded transition duration-300"
-                >
+                <NavLink href="/trips">
                   Trips
-                </a>
+                </NavLink>
               </li>
             </ul>
           </div>

@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation"
 const activeStyle = "text-primary py-3 px-3 rounded transition duration-300"
 const inactiveStyle = "text-white hover:text-primary py-3 px-3 rounded transition duration-300"
 
-function NavLink({ href }) {
+function NavLink({ href, children }) {
   const pathname = usePathname();
 
   return (
